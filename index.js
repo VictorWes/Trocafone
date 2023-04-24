@@ -2,6 +2,7 @@ import express from "express";
 import database from "./src/database/database.js";
 import routerUser from "./src/routes/route.user.js";
 import routerAuth from "./src/routes/router.auth.js";
+import routerAnucio from "./src/routes/route.anucio.js";
 
 const api = express();
 database();
@@ -16,3 +17,7 @@ api.use("/renameuser", routerUser);
 api.use("/create", routerUser);
 api.use("/users", routerUser);
 api.use("/findbyid", routerUser);
+api.use("/create", routerAnucio);
+api.use("/anucios", routerAnucio);
+api.use("/anucio", routerAnucio)
+api.use("/anuciosid", routerAnucio)
