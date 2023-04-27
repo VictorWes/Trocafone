@@ -129,7 +129,7 @@ const findAllNewsByUserController = async (req, res) => {
 
     const findAnucioByUser = await findAllNewsByUser.findAllNewsByUser(id);
 
-    return res.send({
+    let countAnucio =  res.send({
       result: findAnucioByUser.map((item) => ({
         idnews: item._id,
         modelPhone: item.modelPhone,
@@ -141,10 +141,14 @@ const findAllNewsByUserController = async (req, res) => {
         userId: item.user._id,
       })),
     });
+  
+    return countAnucio
   } catch (err) {
     res.status(400).send({ message: err.message });
   }
 };
+
+
 export default {
   createAnucioController,
   findAnucioController,

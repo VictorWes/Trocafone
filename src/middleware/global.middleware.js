@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import findById from "../service/service.user.js";
+import findAllNewsByUser from "../service/service.anucio.js";
 const validId = (req, res, next) => {
   const id = req.params.id;
 
@@ -23,4 +24,24 @@ const validUser = async (req, res, next) => {
   next();
 };
 
-export { validId, validUser };
+const quantidadeAnuciosPostados = async (req, res, next) => {
+  let { id } = req.params;
+  const findAnucioByUser = await findAllNewsByUser.findAllNewsByUser(id);
+
+  let qteAnucios = findAnucioByUser.length;
+
+  if (qteAnucios <= 9) {
+    console.log("Novato");
+  }
+  if (qteAnucios >= 10 && qteAnucios <= 14) {
+    console.log("Intermediario");
+  } else {
+    if (qteAnucios > 15) {
+      console.log("Veterano");
+    }
+  }
+
+//Colocar no perfil da pessoa a quantidade de anucios que já postou
+  return next();
+};
+export { validId, validUser, quantidadeAnuciosPostados };
