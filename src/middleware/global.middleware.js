@@ -24,7 +24,11 @@ const validUser = async (req, res, next) => {
   next();
 };
 
+
+
 const quantidadeAnuciosPostados = async (req, res, next) => {
+  
+//Colocar no perfil da pessoa a quantidade de anucios que já postou
   let { id } = req.params;
   const findAnucioByUser = await findAllNewsByUser.findAllNewsByUser(id);
 
@@ -41,7 +45,6 @@ const quantidadeAnuciosPostados = async (req, res, next) => {
     }
   }
 
-//Colocar no perfil da pessoa a quantidade de anucios que já postou
   return next();
 };
 export { validId, validUser, quantidadeAnuciosPostados };

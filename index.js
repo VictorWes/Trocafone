@@ -17,7 +17,11 @@ api.use("/renameuser", routerUser);
 api.use("/create", routerUser);
 api.use("/users", routerUser);
 api.use("/findbyid", routerUser);
+
+
+api.use("/findallanucio", routerAnucio)
+api.use("/search", routerAnucio);
 api.use("/create", routerAnucio);
 api.use("/anucios", routerAnucio);
-api.use("/anucio", routerAnucio)
-api.use("/anuciosid", routerAnucio)
+api.use("/anucio", routerAnucio);
+api.use("/anuciosid", routerAnucio);
