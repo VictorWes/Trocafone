@@ -1,4 +1,5 @@
 # Trocafone
+Se encontra na branch Master
 
 Trocafone é uma API onde é possível criar usuário, criar anuncios, update anu cios, pesquisar anuncio por cidade específica dentre outros procedimentos, segue abaixo o link da documentação no swagger sendo possivel realizar todos os procedimentos.
 
