@@ -12,10 +12,13 @@ const registerPhone = new mongoose.Schema({
   numeroParaContato: {
     type: String,
     require: true,
+    minLength: 11,
+    maxLength: 11
   },
   valorPhoneTrocaPor: {
     type: String,
     require: true,
+   
   },
   city: {
     type: String,

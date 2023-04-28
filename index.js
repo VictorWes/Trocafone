@@ -25,3 +25,4 @@ api.use("/create", routerAnucio);
 api.use("/anucios", routerAnucio);
 api.use("/anucio", routerAnucio);
 api.use("/anuciosid", routerAnucio);
+api.use("/update", routerAnucio)

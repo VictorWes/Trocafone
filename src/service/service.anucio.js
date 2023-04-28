@@ -16,6 +16,18 @@ const findAllNewsByUser = (id) =>
 
 const findAllAnucioByCityService = (city) =>
   registerPhone.find({ city: { $regex: `${city || ""}`, $options: "i" } });
+const upadteAnucioService = (
+  id,
+  modelPhone,
+  usageTime,
+  numeroParaContato,
+  valorPhoneTrocaPor,
+  city
+) =>
+  registerPhone.findOneAndUpdate(
+    { _id: id },
+    { modelPhone, usageTime, numeroParaContato, valorPhoneTrocaPor, city }
+  );
 
 export default {
   createAnucioService,
@@ -23,5 +35,6 @@ export default {
   findUniqueAnucioService,
   findAllNewsByUser,
   searchByTitleService,
-  findAllAnucioByCityService
+  findAllAnucioByCityService,
+  upadteAnucioService
 };
