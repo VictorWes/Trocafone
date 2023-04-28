@@ -3,10 +3,12 @@ import database from "./src/database/database.js";
 import routerUser from "./src/routes/route.user.js";
 import routerAuth from "./src/routes/router.auth.js";
 import routerAnucio from "./src/routes/route.anucio.js";
+import dotenv from "dotenv";
 
+dotenv.config();
 const api = express();
 database();
-const port = 8000;
+const port = process.env.PORT || 8000;
 api.use(express.json());
 
 api.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
