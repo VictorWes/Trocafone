@@ -1,7 +1,7 @@
 # Trocafone
 API Se encontra na branch Master.
 
-Trocafone é uma API onde é possível criar usuário, criar anuncios, update anuncios, pesquisar anuncio por cidade específica dentre outros procedimentos, segue abaixo o link da documentação no swagger sendo possivel realizar todos os procedimentos.
+Trocafone é uma API onde é possível criar usuário, criar anuncios, update anuncios, pesquisar anuncio por cidade específica dentre outros procedimentos.
 
 A ideia de criar a API do trocafone surgiu quando minha namorada queria trocar o seu telefone, mas a mesma tem muita vergonha de falar com desconhecidos, eu quis encorajar ela a fazer alguns anuncios na OLX, dentre outros sites disponíveis para possíveis trocas, mas ela não se sentia confiante em utilizar esses outros sites por que por mais que sejam bastante conhecidos não passavam credibilidade suficiente para ela.
 
